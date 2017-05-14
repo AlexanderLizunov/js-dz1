@@ -16,7 +16,8 @@ function returnFirstArgument(arg) {
  Значение по умолчанию второго аргумента должно быть 100
  */
 function defaultParameterValue(a, b ) {
-    return a + (b || 100);
+    b = b || 100
+    return a + b;
 }
 
 /*
@@ -49,7 +50,7 @@ function returnFnResult(fn) {
  Функция должна принимать число (значение по умолчанию - 0) и возвращать функцию (F)
  При вызове F, переданное число должно быть увеличено на единицу и возвращено из F
  */
-function returnCounter(number=0) {
+function returnCounter(number) {
     number = number || 0;
     return function () {
         return number+=1;
